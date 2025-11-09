@@ -1,0 +1,242 @@
+:root {
+  --verde-escuro: #153e2e;
+  --verde-claro: #6fc195;
+  --bg: #fbfdfb;
+  --card: #ffffff;
+  --muted: #6b7574;
+  --radius: 14px;
+  --container: 1100px;
+  --shadow: 0 12px 30px rgba(10, 20, 15, 0.06);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #122218;
+  line-height: 1.5;
+}
+.container {
+  width: 90%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* HEADER NOVO (igual landing) */
+.main-header {
+  background-color: #f9fbf8;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #0d3b2e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #36b37e;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-menu a:hover {
+  color: #1b7950;
+}
+
+.nav-menu a.active {
+  color: #1b7950;
+  border-bottom: 2px solid #1b7950;
+  padding-bottom: 2px;
+}
+
+/* HERO */
+.hero-compact {
+  padding: 6rem 0 2rem;
+  background: linear-gradient(180deg, #f6fbf7, #fff);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 36px;
+  align-items: center;
+}
+.hero-left h1 {
+  font-size: 2.15rem;
+  color: var(--verde-escuro);
+  margin-bottom: 0.6rem;
+}
+.hero-left p {
+  max-width: 60ch;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  background: var(--verde-escuro);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.22s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.btn.ghost {
+  background: transparent;
+  border: 2px solid rgba(21, 62, 46, 0.08);
+  color: var(--verde-escuro);
+}
+
+/* PREVIEW SECTION */
+.preview-section {
+  padding: 3.2rem 0;
+}
+.kpis {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.2rem 0;
+}
+.kpi {
+  background: var(--card);
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  min-width: 220px;
+  flex: 1;
+  text-align: left;
+}
+.kpi .kpi-title {
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+.kpi .kpi-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+.kpi.premium {
+  border-left: 4px solid var(--verde-claro);
+}
+
+/* IMPACT SECTION */
+.impact-section {
+  padding: 3.2rem 0;
+  background: linear-gradient(180deg, #fff, #f6fbf7);
+}
+.impact-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.impact-card {
+  background: var(--card);
+  padding: 1.6rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  min-width: 200px;
+  text-align: center;
+}
+.impact-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--verde-escuro);
+}
+.impact-text {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #f5f8f6;
+  border-top: 2px solid #e0ece4;
+  margin-top: 60px;
+  padding: 60px 0 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links a {
+  color: #1a5932;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: #2d8659;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #d8e5dd;
+}
+.footer-bottom small {
+  color: #555;
+}
+
+/* RESPONSIVO */
+@media (max-width: 780px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .kpis {
+    flex-direction: column;
+  }
+  .impact-grid {
+    flex-direction: column;
+  }
+}
