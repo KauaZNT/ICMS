@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f7f9f8;
+  color: #2e2e2e;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1c5b35;
+}
+
+.logo span {
+  color: #4ed37b;
+}
+
+.header nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #2e2e2e;
+  transition: 0.3s;
+}
+
+.header nav a:hover {
+  color: #1c5b35;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10% 8%;
+  background: linear-gradient(135deg, #e9f5ef, #ccebd9);
+  position: relative;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #1c5b35;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #3a3a3a;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  background: #1c5b35;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #4ed37b;
+  color: #1c5b35;
+}
+
+.hero-image img {
+  width: 420px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background: url('https://svgshare.com/i/vfU.svg');
+  background-size: cover;
+}
+
+/* SEÇÕES */
+section {
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+/* SOBRE */
+.sobre h2, .beneficios h2, .funciona h2, .impacto h2, .simulador h2, .cta-final h2 {
+  color: #1c5b35;
+  margin-bottom: 1rem;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.8;
+}
+
+/* BENEFÍCIOS */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.beneficio {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.beneficio h3 {
+  color: #1c5b35;
+  margin-bottom: 0.5rem;
+}
+
+/* COMO FUNCIONA */
+.passos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.passo {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-width: 250px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* IMPACTO */
+.impacto {
+  background: linear-gradient(135deg, #e3f5eb, #f5fffa);
+}
+
+.impacto-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.impacto-grid div {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.impacto-grid h3 {
+  color: #1c5b35;
+  font-size: 2rem;
+}
+
+/* SIMULADOR */
+.simulador-box {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.simulador-box input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #d9e6d9;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.simulador-box button {
+  background: #1c5b35;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.simulador-box button:hover {
+  background: #4ed37b;
+  color: #1c5b35;
+}
+
+/* CTA FINAL */
+.cta-final {
+  background: linear-gradient(135deg, #ccebd9, #e9f5ef);
+  padding: 4rem 10%;
+  border-radius: 50px 50px 0 0;
+}
+
+.cta-final .btn {
+  display: inline-block;
+  background: #1c5b35;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-final .btn:hover {
+  background: #4ed37b;
+  color: #1c5b35;
+}
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(135deg, #1c5b35, #2e7a4a);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 850px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .hero-text {
+    padding-right: 0;
+  }
+
+  .passos, .impacto-grid {
+    flex-direction: column;
+  }
+}

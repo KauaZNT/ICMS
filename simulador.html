@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador | EcoGestor ICMS</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/simulador.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- HEADER (padronizado com index.html) -->
+  <header class="main-header">
+    <div class="container-header">
+      <div class="logo">
+        <a href="index.html"><strong>EcoGestor</strong> <span>ICMS</span></a>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html">Início</a>
+        <a href="simulador.html">Simulador</a>
+        <a href="funciona.html">Como Funciona</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="planos.html">Planos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container simulador-container">
+    <section class="intro">
+      <h1>Simule sua economia com o EcoGestor ICMS</h1>
+      <p class="muted">Preencha os dados abaixo e veja quanto sua empresa pode economizar com energia e crédito de ICMS.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="simuladorForm">
+        <div class="form-group">
+          <label for="consumo">Consumo mensal (kWh)</label>
+          <input type="number" id="consumo" required placeholder="Ex: 12000">
+        </div>
+
+        <div class="form-group">
+          <label for="custo">Custo médio do kWh (R$)</label>
+          <input type="number" id="custo" step="0.01" required placeholder="Ex: 0.83">
+        </div>
+
+        <div class="form-group">
+          <label for="produtivo">% de consumo produtivo</label>
+          <input type="number" id="produtivo" min="0" max="100" required placeholder="Ex: 75">
+        </div>
+
+        <button type="submit" class="btn">Calcular economia</button>
+      </form>
+    </section>
+
+    <section id="resultado" class="resultado hidden">
+      <h2>Resultado da Simulação</h2>
+      <p class="muted">Estimativa com base nos dados informados.</p>
+
+      <div class="resultado-box">
+        <div class="valor">
+          <strong>Economia estimada:</strong>
+          <p id="economia">R$ 0,00</p>
+        </div>
+        <div class="valor">
+          <strong>Percentual de economia:</strong>
+          <p id="porcentagem">0%</p>
+        </div>
+      </div>
+
+      <canvas id="graficoEconomia"></canvas>
+
+      <div class="cta">
+        <p>Quer relatórios completos e auditorias automáticas?</p>
+        <a href="planos.html" class="btn ghost">Conheça o Premium</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (padronizado com index.html) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>EcoGestor ICMS</strong>
+        <p class="muted">Gestão de consumo e créditos fiscais de forma sustentável.</p>
+      </div>
+
+      <div>
+        <h4>Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="simulador.html">Simulador</a></li>
+          <li><a href="planos.html">Planos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <p class="muted">ecogestor@exemplo.com</p>
+        <p class="muted">São Paulo, Brasil</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© 2025 EcoGestor ICMS — Projeto Acadêmico. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="js/simulador.js"></script>
+</body>
+</html>
